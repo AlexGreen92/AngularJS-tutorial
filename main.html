@@ -1,16 +1,19 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myModule">
 	<head>
 		<meta charset="utf-8"/>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		 <script src="./scripts/samuraiScript.js"></script>
 	</head>
 
 
-	<body>
+	<body ng-controller = "controller1">
 
 		<h1>Hello world 123</h1>
 		<div>{{ ['David','Pam','Sara'][2] }}</div>
 		<div>40+50 = {{40+50}}</div>
+		<div>{{message}}</div>
+		<div>{{message}}</div>
 	</body>
 
 
