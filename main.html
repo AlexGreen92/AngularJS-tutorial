@@ -1,24 +1,16 @@
 <!doctype html>
 <html ng-app="myModule">
 	<head>
-		<meta charset="utf-8"/>
+		 <meta charset="utf-8"/>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		 <script src="./scripts/samuraiScript.js"></script>
 	</head>
 
-
 	<body ng-controller = "controller1">
-
+		<div>Name : {{country.name}} ','Capital : {{country.capital}}</div>
+		<img ng-src ="{{country.flag}}" alt='{{country.name+" flag"}}'style='height: 125px;width: 375px'>
 		<h1>Hello world 123</h1>
-		<div>{{ ['David','Pam','Sara'][2] }}</div>
-		<div>40+50 = {{40+50}}</div>
-		<div>{{message}}</div>
-		<div>{{message}}</div>
-		<h3>First Name : {{ employeeObj.firstName }}</h3>
-		<h3>Second Name : {{ employeeObj.secondName }}</h3>
-		<h3>Employee gender : {{ employeeObj.gender }}</h3>
+		<div>{{ ['Alex','12345','Hedwig'][2] }}</div>
 	</body>
-
-
-
+	
 </html>
