@@ -3,4 +3,4 @@
 # Saga 2. AngularJS modules and controlles. 
 # Saga 3. Controllers in AngularJS.
 # Saga 4. AngularJS ng src dirrective.
-# Saga 5.
+# Saga 5. Two way data binding in AngularJS.
