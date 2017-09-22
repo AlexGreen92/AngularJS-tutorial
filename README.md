@@ -1,7 +1,7 @@
-# AngularJS path of Green Samurai  . Preview changes
-# Saga 1. What is AngularJS.
-# Saga 2. AngularJS modules and controlles. 
-# Saga 3. Controllers in AngularJS.
-# Saga 4. AngularJS ng src dirrective.
-# Saga 5. Two way data binding in Anglular JS.
-# Saga 6. 
+# AngularJS path of Green Samurai https://www.youtube.com/watch?v=zKkUN-mJtPQ&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl
+#  1. What is AngularJS.
+#  2. AngularJS modules and controlles. 
+#  3. Controllers in AngularJS.
+#  4. AngularJS ng src dirrective.
+#  5. Two way data binding in Anglular JS.
+#  6. AngularJs ng repeat directive.
