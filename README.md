@@ -5,4 +5,5 @@
 #  4. AngularJS ng src dirrective.
 #  5. Two way data binding in Anglular JS.
 #  6. AngularJs ng repeat directive.
-#  7.
+#  7. Handling events in AngularJS.
+#  8. 
