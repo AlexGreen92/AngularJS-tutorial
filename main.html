@@ -6,20 +6,36 @@
 		 <meta charset="utf-8"/>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		 <script src="./scripts/samuraiScript.js"></script>
+		 <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 <!--body-->
 
-	<body ng-app='myModule' ng-controller='controller1' style='font-family:Arial'>
-		<img src="./img/flag.png" style = 'height: 50px'>
-		<ul>
-			<li ng-repeat = 'x in countries' ng-init = '$parentIndex=$index'>{{x.name}} - Index = {{$index}}
-				<ul>
-					<li ng-repeat = 'y in x.cities'>{{y.name}} - Parent Index = {{ $parentIndex }} - Index = {{$index}}
-					</li>
-				</ul>
-			</li>
-		</ul>
+	<body ng-app='myModule' ng-controller='controller1'>
+		<img src="./img/flag.png">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Likes</th>
+						<th>Dislikes</th>
+						<th>Buttons</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr ng-repeat='technology in technologies'>
+						<td>{{technology.name}}</td>
+						<td>{{technology.likes}}</td>
+						<td>{{technology.dislikes}}</td>
+						<td>
+							<input type="button" value="Like" ng-click = "incrementLikes(technology)">
+							<input type="button" value="Dislike" ng-click = "incrementDislikes(technology)">
+							
+						</td>
+					</tr>
+				</tbody>
+			</table>
 	</body>
 </html>
 
