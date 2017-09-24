@@ -13,26 +13,27 @@
 
 	<body ng-app='myModule' ng-controller='controller1'>
 		<img src="./img/flag.png">
+		<br>
+			Rows to display : <input type="number" step = '1' min = '0' max = '5' ng-model='rowLimit'>
+			<br>
 			<table>
 				<thead>
 					<tr>
 						<th>Name</th>
-						<th>Likes</th>
-						<th>Dislikes</th>
-						<th>Buttons</th>
+						<th>Date of birth</th>
+						<th>Gender</th>
+						<th>Salary(number filter)</th>
+						<th>Salary(currency filter)</th>
 					</tr>
 				</thead>
 
 				<tbody>
-					<tr ng-repeat='technology in technologies'>
-						<td>{{technology.name}}</td>
-						<td>{{technology.likes}}</td>
-						<td>{{technology.dislikes}}</td>
-						<td>
-							<input type="button" value="Like" ng-click = "incrementLikes(technology)">
-							<input type="button" value="Dislike" ng-click = "incrementDislikes(technology)">
-							
-						</td>
+					<tr ng-repeat='employee in employees | limitTo : rowLimit'>
+						<td>{{employee.name | uppercase}}</td>
+						<td>{{employee.dateOfBirth | date : "dd/MM/yyyy"}}</td>
+						<td>{{employee.gender | lowercase}}</td>
+						<td>{{employee.salary | number:2}}</td>
+						<td>{{employee.salary | currency:"$"}}</td>
 					</tr>
 				</tbody>
 			</table>
