@@ -7,3 +7,4 @@
 #  6. AngularJS ng repeat directive.
 #  7. Handling events in AngularJS.
 #  8. AngularJS filters.
+#  9. Sorting data in AngularJS.
