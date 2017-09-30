@@ -1,42 +1,46 @@
 <!doctype html>
 <html xmlns = "http://www.w3.org/1999/xhtml">
-<!--head-->
 	<head>
+	  <!--head-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		 <meta charset="utf-8"/>
-		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-		 <script src="./scripts/samuraiScript.js"></script>
-		 <link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="./scripts/samuraiScript.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-
-<!--body-->
-
 	<body ng-app='myModule' ng-controller='controller1'>
-		<img src="./img/flag.png">
-		<br>
-			Rows to display : <input type="number" step = '1' min = '0' max = '5' ng-model='rowLimit'>
-			<br>
-			<table>
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Date of birth</th>
-						<th>Gender</th>
-						<th>Salary(number filter)</th>
-						<th>Salary(currency filter)</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<tr ng-repeat='employee in employees | limitTo : rowLimit'>
-						<td>{{employee.name | uppercase}}</td>
-						<td>{{employee.dateOfBirth | date : "dd/MM/yyyy"}}</td>
-						<td>{{employee.gender | lowercase}}</td>
-						<td>{{employee.salary | number:2}}</td>
-						<td>{{employee.salary | currency:"$"}}</td>
-					</tr>
-				</tbody>
-			</table>
+	  <!--body-->
+		<img src="./img/flag.png"><br>
+		Order By :  <select ng-model='sortColumn'>
+						<option value='name'>Name </option>
+						<option value='dateOfBirth'>Date of Birth</option>
+						<option value='gender'>Gender</option>
+						<option value='-salary'>Salary +</option>
+						<option value='+salary'>Salary -</option>
+					</select>
+		<!--превед-->
+		<table>
+			<thead>
+			  <!--table head-->
+				<tr>
+					<th>Name</th>
+					<th>Date of birth</th>
+					<th>Gender</th>
+					<th>Salary(number filter)</th>
+					<th>Salary(currency filter)</th>
+				</tr>
+			</thead>
+			<tbody>
+			  <!--table body-->
+				<tr ng-repeat='employee in employees | orderBy:sortColumn'>
+					<td>{{employee.name | uppercase}}</td>
+					<td>{{employee.dateOfBirth | date : "dd/MM/yyyy"}}</td>
+					<td>{{employee.gender | lowercase}}</td>
+					<td>{{employee.salary | number:2}}</td>
+					<td>{{employee.salary | currency:"$"}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>
 

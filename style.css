@@ -1,14 +1,13 @@
 body {
 	font-family : Arial;
-	font-size: 16px;
-	color : green;
+	font-size: 19px;
 }
 img {
 	height : 100px ;
-	width : 600px ;
+	width : 675px ;
 }
 table {
-	background-color: aqua;
+	background-color: #3399ff;
 	border-collapse: collapse;
 }
 td {
@@ -19,4 +18,10 @@ th {
 	border:1px solid red;
 	padding: 5px;
 	text-align: left;
+}
+option {
+	background-color: #cc0000;
+}
+select{
+	background-color: #66cc00;
 }
