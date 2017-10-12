@@ -8,7 +8,20 @@ var samuraiObj = angular.module("myModule",[])
 						{name:'Todd',dateOfBirth : new Date('December 30, 1983'), gender : 'Male', salary : 78.777},
 					];
 		$scope.employees = employees;
-		$scope.rowLimit = 5; //ng-model='rowLimit'
 		$scope.sortColumn='name';
-})
+		$scope.reverseSort = false;
 
+		$scope.sortData = function (column) {
+			$scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
+			$scope.sortColumn = column;
+			console.log('hi');
+		}
+
+		$scope.getSortClass = function (column){
+			console.log('hey');
+			if($scope.sortColumn == column) {
+				return $scope.reverseSort ? 'arrow-down' : 'arrow-up';
+			}
+			return ;
+		}
+});
