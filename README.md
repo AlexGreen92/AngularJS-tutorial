@@ -9,3 +9,4 @@
 #  8. AngularJS filters.
 #  9. Sorting data in AngularJS.
 #  10. AngularJS sort rows by table header.
+#  11. Search filter in AngularJS.
