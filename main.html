@@ -11,28 +11,27 @@
 	<body ng-app='myModule' ng-controller='controller1'>
 	  <!--body-->
 		<img src="./img/flag.png"><br>
-		<div class='.arrow-up'></div>
 		<!--превед-->
+		Search:<input type="text" placeholder="Search employees" ng-model="searchText.city"/>
 		<table>
 			<thead>
 			  <!--table head-->
 				<tr>
-					<th ng-click='sortData("name")'>Name<div ng-class='getSortClass("name")'></div></th>
-					<th ng-click='sortData("dateOfBirth")'>Date of birth<div ng-class='getSortClass("dateOfBirth")'></div></th>
-					<th ng-click='sortData("gender")'>Gender<div ng-class='getSortClass("gender")'></div></th>
-					<th ng-click='sortData("salary")'>Salary(number filter)<div ng-class="getSortClass('salary')"></div></th>
+					<th>Name</div></th>
+					<th>Gender</th>
+					<th>Salary</th>
+					<th>City</th>
 				</tr>
 			</thead>
 			<tbody>
 			  <!--table body-->
-				<tr ng-repeat='employee in employees | orderBy:sortColumn:reverseSort'>
+				<tr ng-repeat='employee in employees | filter : searchText'>
 					<td>{{employee.name}}</td>
-					<td>{{employee.dateOfBirth | date : "dd/MM/yyyy"}}</td>
 					<td>{{employee.gender}}</td>
 					<td>{{employee.salary}}</td>
+					<td>{{employee.city}}</td>
 				</tr>
 			</tbody>
 		</table>
 	</body>
 </html>
-
