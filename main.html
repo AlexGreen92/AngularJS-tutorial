@@ -12,14 +12,16 @@
 	<body ng-app='myModule' ng-controller='controller1'>
 	  <!--body-->
 		<img src="./img/flag.png"><br>
-		<!--превед-->	
+		<!--превед-->
+		<input type="checkbox" ng-model='hideSalary'/>Hide Salary	
 		<table>
 			<thead>
 			  <!--table head-->
 				<tr>
 					<th>Name</div></th>
 					<th>Gender</th>
-					<th>Salary</th>
+					<th ng-show='hideSalary'>Salary</th>
+					<th ng-hide='hideSalary'>Salary</th>
 					<th>City</th>
 				</tr>
 			</thead>
@@ -28,7 +30,8 @@
 				<tr ng-repeat='employee in employees'>
 					<td>{{employee.name}}</td>
 					<td>{{employee.gender | gender}}</td>
-					<td>{{employee.salary}}</td>
+					<td ng-show='hideSalary'>#####</td>
+					<td ng-hide='hideSalary'>{{employee.salary}}</td>
 					<td>{{employee.city}}</td>
 				</tr>
 			</tbody>
