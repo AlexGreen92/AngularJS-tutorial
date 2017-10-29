@@ -11,4 +11,3 @@
 #  10. AngularJS sort rows by table header.
 #  11. Search filter in AngularJS.
 #  12. AngularJS filter by multiple properties.
-#  13. Create a custom filter in AngularJS.
