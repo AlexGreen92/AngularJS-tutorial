@@ -13,3 +13,4 @@
 #  12. AngularJS filter by multiple properties.
 #  13. Create a custom filter in AngularJS.
 #  14. ng hide and ng show in AngularJS.
+#  15. AngularJs ng init directive.
