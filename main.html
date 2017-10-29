@@ -13,28 +13,12 @@
 	  <!--body-->
 		<img src="./img/flag.png"><br>
 		<!--превед-->
-		<input type="checkbox" ng-model='hideSalary'/>Hide Salary	
-		<table>
-			<thead>
-			  <!--table head-->
-				<tr>
-					<th>Name</div></th>
-					<th>Gender</th>
-					<th ng-show='hideSalary'>Salary</th>
-					<th ng-hide='hideSalary'>Salary</th>
-					<th>City</th>
-				</tr>
-			</thead>
-			<tbody>
-			  <!--table body-->
-				<tr ng-repeat='employee in employees'>
-					<td>{{employee.name}}</td>
-					<td>{{employee.gender | gender}}</td>
-					<td ng-show='hideSalary'>#####</td>
-					<td ng-hide='hideSalary'>{{employee.salary}}</td>
-					<td>{{employee.city}}</td>
-				</tr>
-			</tbody>
-		</table>
+		<ul>
+			<li ng-repeat='country in countries' ng-init = 'parentIndex = $index'>{{country.name}} -Index = {{$index}}
+			<ul>
+				<li ng-repeat='city in country.cities'>{{city.name}} - Parent Index = {{parentIndex}}-Index = {{$index}}</li>
+			</ul>
+			</li>
+		</ul>
 	</body>
 </html>
