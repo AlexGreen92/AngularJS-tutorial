@@ -12,7 +12,8 @@
 	  <!--body-->
 		<img src="./img/flag.png"><br>
 		<!--превед-->
-		Search:<input type="text" placeholder="Search employees" ng-model="searchText.city"/>
+		Search:<input type="text" placeholder="Search city and name" ng-model="searchText"/>
+	
 		<table>
 			<thead>
 			  <!--table head-->
@@ -25,7 +26,7 @@
 			</thead>
 			<tbody>
 			  <!--table body-->
-				<tr ng-repeat='employee in employees | filter : searchText'>
+				<tr ng-repeat='employee in employees | filter : search'>
 					<td>{{employee.name}}</td>
 					<td>{{employee.gender}}</td>
 					<td>{{employee.salary}}</td>
