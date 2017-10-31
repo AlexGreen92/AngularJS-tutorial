@@ -1,4 +1,4 @@
-# AngularJS path of Green Samurai https://www.youtube.com/watch?v=zKkUN-mJtPQ&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl
+# AngularJS Lessons https://www.youtube.com/watch?v=zKkUN-mJtPQ&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl
 #  1. What is AngularJS.
 #  2. AngularJS modules and controlles. 
 #  3. Controllers in AngularJS.
@@ -14,3 +14,4 @@
 #  13. Create a custom filter in AngularJS.
 #  14. ng hide and ng show in AngularJS.
 #  15. AngularJs ng init directive.
+#  16. ng include directive in AngularJS.
